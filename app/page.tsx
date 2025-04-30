@@ -382,6 +382,7 @@ export default function Home() {
                   "DaisyUI",
                 ]}
                 githubUrl="https://github.com/ritiksharma-code/Realtime-Chat-App"
+                liveUrl="https://www.pingpal.site"
               />
               <div className="bg-background rounded-lg border shadow-sm p-8 flex flex-col justify-center items-center text-center">
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
