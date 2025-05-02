@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone, MapPin, ArrowRight } from "lucide-react"
+import { Github, Linkedin, Mail, Phone, MapPin, ArrowRight, FileTextIcon, ExternalLinkIcon } from "lucide-react"
 import Link from "next/link"
 import SkillCard from "@/components/skill-card"
 import ProjectCard from "@/components/project-card"
@@ -68,7 +68,9 @@ export default function Home() {
                     target="_blank"
                     className="inline-flex h-11 items-center justify-center rounded-md border border-input bg-background px-8 text-sm font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground"
                   >
-                    Resume
+                    <FileTextIcon className="mr-2 h-4 w-4" />
+                    View Resume
+                    <ExternalLinkIcon className="ml-1 h-3 w-3" />
                   </Link>
                 </div>
               </div>
