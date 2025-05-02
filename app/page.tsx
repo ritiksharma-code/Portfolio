@@ -78,7 +78,14 @@ export default function Home() {
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
                       <Mail className="h-5 w-5 text-primary" />
-                      <span>ritiksharma0405@gmail.com</span>
+                      <Link
+                        href="mailto:ritiksharma0405@gmail.com"
+                        target="_blank"
+                        className="hover:text-primary transition-colors"
+                      >
+                        ritiksharma0405@gmail.com
+                      </Link>
+                      <span></span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Phone className="h-5 w-5 text-primary" />
