@@ -483,7 +483,7 @@ export default function Home() {
                 My Journey
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-black font-heading text-black">
-                Experience & <span className="bg-brutal-coral text-white px-3 py-1 inline-block -rotate-1">Education</span>
+                Experience & <span className="bg-brutal-coral text-black px-3 py-1 inline-block -rotate-1">Education</span>
               </h2>
             </div>
             <div className="grid md:grid-cols-2 gap-10">
