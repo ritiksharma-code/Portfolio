@@ -1,14 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .font-heading {
+    font-family: 'Outfit', 'Inter', sans-serif;
+  }
+
+  .transition-brutal {
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer components {
+  .brutal-card {
+    @apply border-5 border-black rounded-brutal shadow-brutal-md transition-brutal;
+  }
+
+  .brutal-card:hover {
+    @apply -translate-y-1 shadow-brutal-lg;
+  }
+
+  .brutal-button {
+    @apply border-4 border-black rounded-brutal font-bold transition-brutal;
+  }
+
+  .brutal-button:hover {
+    @apply -translate-y-0.5 shadow-brutal-md;
+  }
+
+  .brutal-button:active {
+    @apply translate-y-0 shadow-brutal-sm;
+  }
+
+  .brutal-input {
+    @apply border-3 border-black rounded-sm ring-0 focus:border-brutal-lime focus:ring-0 transition-brutal;
   }
 }
 
@@ -20,7 +56,7 @@ body {
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
+    --primary: 216 100% 50%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
@@ -48,6 +84,7 @@ body {
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -55,7 +92,7 @@ body {
     --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
+    --primary: 216 100% 50%;
     --primary-foreground: 0 0% 9%;
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
@@ -88,7 +125,17 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
   }
 }

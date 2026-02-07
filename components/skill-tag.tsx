@@ -1,11 +1,26 @@
+import { Badge } from "@/components/ui/badge"
+
 interface SkillTagProps {
   name: string
+  variant?: "lime" | "blue" | "coral"
 }
 
-export default function SkillTag({ name }: SkillTagProps) {
+export default function SkillTag({ name, variant = "lime" }: SkillTagProps) {
+  const variantStyles = {
+    lime: "bg-brutal-lime text-black border-black shadow-brutal-lime-sm hover:shadow-brutal-sm",
+    blue: "bg-brutal-blue text-white border-black shadow-brutal-blue-sm hover:shadow-brutal-sm",
+    coral: "bg-brutal-coral text-white border-black shadow-brutal-coral-sm hover:shadow-brutal-sm",
+  }
+
   return (
-    <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border-transparent bg-primary text-primary-foreground hover:bg-primary/80">
+    <Badge
+      className={`
+        border-3 rounded-sm px-3 py-1 text-xs font-bold uppercase tracking-wide
+        transition-brutal hover:scale-110 hover:-rotate-1
+        ${variantStyles[variant]}
+      `}
+    >
       {name}
-    </div>
+    </Badge>
   )
 }
