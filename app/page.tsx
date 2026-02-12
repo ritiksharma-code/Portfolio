@@ -429,7 +429,7 @@ export default function Home() {
                   "DaisyUI",
                 ]}
                 githubUrl="https://github.com/ritiksharma-code/Realtime-Chat-App"
-                liveUrl="https://www.pingpal.site"
+                liveUrl="https://www.pingpal.online/"
               />
               <div className="relative group">
                 {/* Background offset layer */}
